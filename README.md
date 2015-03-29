@@ -4,6 +4,6 @@ Univerzitet u Sarajevu
 
 Projekat iz Predmeta WEB Tehnologije
 
-Tema: Gratsko Saobraćajno Preduzeće
+Tema: Gradsko Saobraćajno Preduzeće
 
 Dunja Bihorac
