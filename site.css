@@ -30,7 +30,7 @@
 .main-menu{
 	margin-top: 40px;
 	height:480px;
-	width: 20%;
+	width: 18%;
 	background:  black;
 	filter:alpha(opacity=40); /* IE */
     -moz-opacity:0.4; /* Mozilla */
@@ -59,20 +59,68 @@
 	color: #4899B7;
 }
 .main-container{
-	background:  #4899B7;
-	filter:alpha(opacity=10); /* IE */
-    -moz-opacity:0.1; /* Mozilla */
-    opacity: 0.1; /* CSS3 */
-	width: 76%;
-	height: 480px;
+	width: 78%;
 	float:right;
 	margin-right: 2%;
 	margin-left: 2%;
 	margin-top: 40px;
-
+	height: 100%;	
 }
 .main-container ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.news-container{
+	width: 85%;
+	height: 130px;
+	margin: 10%;
+}
+.news-circle{
+	height: 190px;
+	width: 190px;
+	margin: -40px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+.more{
+	text-align: right;
+}
+.more a{
+	text-decoration: none;
+	color: #4899B7;
+	font-size: 20px;
+	float: right;
+}
+.more a:hover{
+	text-decoration: none;
+	color: #4899B7;
+	font-size: 22px;
+}
+.news-text{
+	width: 80%;
+	margin-left: 40px;
+	float: right;
+	overflow: hidden;
+}
+.time-table{
+	width: 70%;
+	margin-left: 10%;
+	border: 4px solid  #4899B7;
+	padding: 2px;
+}
+
+.time-table th{
+	background: #DAEAF0;
+}
+.time-table td{
+	text-align: center;
+}
+.main-container h3{
+	color: #4899B7;
+}
+.lines{
+	background: #DAEAF0;
+	font-weight: bold;
 }
