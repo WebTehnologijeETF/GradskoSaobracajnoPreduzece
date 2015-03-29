@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gradsko Saobraćajno Preduzeće</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="background">
+    <div class="site-part header">
+      <span><img src="Prevoz.gif" alt="Gradsko saobraćajno preduzeće" class="header-image"></span>
+      <span class="header-font-main">Trams</span>
+      <span class="header-font">Putujte brže</span>
+    </div>
+    <div class="site-part main-menu">
+      <ul>
+        <li><a href="index.html">Naslovnica</a></li>
+        <li><a href="redvoznje.html">Red Vožnje</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="saznajvise.html">Saznaj više</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <form id="Contact"class="contact">
+      <p>Svrha kontaktiranja naseg preduzeca: 
+        <input list="svrha">
+      <datalist id="svrha">        
+        <option value="Primjedba">
+        <option value="Zalba">
+        <option value="Pitanje">
+        <option value="Pohvala">
+        <option value="Prijedlog">
+      </datalist><br />
+       Vas email:<br /><input type="text"></p>
+       <p>Text:</p>
+       <textarea rows="4" cols="50" class="contact-textearea" placeholder="Ovdje upišite text vaše poruke..." ></textarea><br /><br />
+       <button type="submit" class="contact-button" form="Contact" formmethod="post">Pošalji</button>
+       <button type="reset" class="contact-button" form="Contact">Obriši sve</button>
+      </form>
+    </div>
+  </body>
+</html>
