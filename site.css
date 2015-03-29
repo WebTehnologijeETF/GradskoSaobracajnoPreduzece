@@ -1,0 +1,78 @@
+.background{
+	background-image: url("grey.png");
+    background-repeat: repeat;
+}
+.header-image{
+	height: 125px;
+}
+.header{
+	height: 90px;
+	display: block;
+	border-bottom: solid 10px #4899B7;
+	background-color: #DAEAF0;
+	width: 100%;
+}
+.header-font-main{
+	font-family: 'Lobster', cursive;
+	font-size: 80px;
+	color: #4899B7;
+	vertical-align: top;
+}
+.header-font{
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	color: #DAEAF0;	
+	vertical-align: bottom;
+}
+.site-part{
+	float: left;
+}
+.main-menu{
+	margin-top: 40px;
+	height:480px;
+	width: 20%;
+	background:  black;
+	filter:alpha(opacity=40); /* IE */
+    -moz-opacity:0.4; /* Mozilla */
+    opacity: 0.4; /* CSS3 */
+}
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main-menu li {
+	padding-left: 10px;
+	padding-top: 30px;
+	padding-bottom:30px;
+}
+.main-menu a {
+	text-decoration: none;
+	font-size: 30px;
+	font-family: 'Lobster', cursive;
+	color: #DAEAF0;
+}
+.main-menu a:hover {
+	text-decoration: none;
+	font-size: 31px;
+	font-family: 'Lobster', cursive;
+	color: #4899B7;
+}
+.main-container{
+	background:  #4899B7;
+	filter:alpha(opacity=10); /* IE */
+    -moz-opacity:0.1; /* Mozilla */
+    opacity: 0.1; /* CSS3 */
+	width: 76%;
+	height: 480px;
+	float:right;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-top: 40px;
+
+}
+.main-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
