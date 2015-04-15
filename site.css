@@ -152,3 +152,12 @@
 	width: 35%;
 	margin-left: 20%;
 }
+.display-none{
+	display: none;
+}
+.display-inline{
+	display: inline;
+}
+.small-text{
+	font-size: 12px;
+}
