@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="site.css">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <script src="stablo.js"></script>
 </head>
 
 <body class="background">
@@ -22,9 +23,12 @@
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </div>
-  <div class="main-container">
-    <h3>Tramvajski saobraćaj:</h3>
-    <table class="time-table">
+  <div class="main-container partners">
+    <h3><span onclick="ShowTramvajskiList()"><a>+Tramvajski saobraćaj:</a></span></h3>
+    <div class="display-none" id="tramvajskiList">
+      <span onclick="ShowTram('1')"><a>+ Ponedjeljak </a></span><br />
+      <div class="display-none" id="tram1">
+      <table id="tamvajski1" class="time-table">
        <tr>
         <th></th>
           <th>Polazak</th>
@@ -112,8 +116,10 @@
           <td>8:45</td>
         </tr>
      </table>
-     <h3>Autobuski saobraćaj:</h3>
-    <table class="time-table">
+      </div>
+      <span onclick="ShowTram('2')"><a>+ Utorak </a></span><br />
+      <div id="tram2" class="display-none">
+        <table id="tamvajski2" class="time-table">
        <tr>
         <th></th>
           <th>Polazak</th>
@@ -162,7 +168,7 @@
           <td>8:40</td>
           <td>8:45</td>
         </tr>
-        <tr>
+         <tr>
           <td rowspan="2" class="lines">Linija 3</td>
           <td>6:00</td>
           <td>6:12</td>
@@ -201,6 +207,1108 @@
           <td>8:45</td>
         </tr>
      </table>
+      </div>
+      <span onclick="ShowTram('3')"><a>+ Srijeda</a></span> <br />
+      <div class="display-none" id="tram3">
+        <table id="tamvajski3" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+       <span onclick="ShowTram('4')"><a>+ Cetvrtak</a></span> <br />
+      <div class="display-none" id="tram4">
+        <table id="tamvajski4" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+       <span onclick="ShowTram('5')"><a>+ Petak</a></span><br />
+      <div class="display-none" id="tram5">
+       <table id="tamvajski5" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowTram('6')"><a>+ Subota</a></span> <br />
+      <div class="display-none" id="tram6">
+        <table id="tamvajski6" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowTram('7')"><a>+ Nedjelja </a></span><br />
+      <div class="display-none" id="tram7">
+        <table id="tamvajski7" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+
+    </div>
+    
+    <h3><span onclick="ShowAutobusskiList()"><a>+Autobuski saobraćaj:</a></span></h3>
+    <div class="display-none" id="AutobusskiList">
+      <span onclick="ShowBus('1')"><a>+ Ponedjeljak </a></span><br />
+      <div class="display-none" id="bus1">
+      <table id="tamvajski1" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowBus('2')"><a>+ Utorak </a></span><br />
+      <div id="bus2" class="display-none">
+        <table id="tamvajski2" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowBus('3')"><a>+ Srijeda</a></span> <br />
+      <div class="display-none" id="bus3">
+        <table id="tamvajski3" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+       <span onclick="ShowBus('4')"><a>+ Cetvrtak</a></span> <br />
+      <div class="display-none" id="bus4">
+        <table id="tamvajski4" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+       <span onclick="ShowBus('5')"><a>+ Petak</a></span><br />
+      <div class="display-none" id="bus5">
+       <table id="tamvajski5" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowBus('6')"><a>+ Subota</a></span> <br />
+      <div class="display-none" id="bus6">
+        <table id="tamvajski6" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+      <span onclick="ShowBus('7')"><a>+ Nedjelja </a></span><br />
+      <div class="display-none" id="bus7">
+        <table id="tamvajski7" class="time-table">
+       <tr>
+        <th></th>
+          <th>Polazak</th>
+          <th>Stanica 1</th>
+          <th>Stanica 2</th>
+          <th>Stanica 3</th>
+          <th>Stanica 4</th>
+          <th>Stanica 5</th>
+          <th>Dolazak</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 1</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>7:00</td>
+          <td>7:15</td>
+          <td>7:20</td>
+          <td>7:40</td>
+          <td>7:42</td>
+          <td>7:47</td>
+          <td>7:55</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 2</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+         <tr>
+          <td rowspan="2" class="lines">Linija 3</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+        <tr>
+          <td rowspan="2" class="lines">Linija 4</td>
+          <td>6:00</td>
+          <td>6:12</td>
+          <td>6:20</td>
+          <td>6:26</td>
+          <td>6:31</td>
+          <td>6:40</td>
+          <td>6:45</td>
+        </tr>
+        <tr>
+          <td>8:00</td>
+          <td>8:12</td>
+          <td>8:20</td>
+          <td>8:26</td>
+          <td>8:31</td>
+          <td>8:40</td>
+          <td>8:45</td>
+        </tr>
+     </table>
+      </div>
+
+    </div>
+
+     
   </div>
 </body>
 </html>

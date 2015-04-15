@@ -161,3 +161,20 @@
 .small-text{
 	font-size: 12px;
 }
+
+.stablo a{
+	color: #4899B7;
+	text-decoration: none;
+	font-size: 20px;
+}
+.stablo a:hover{
+	color: #4899B7;
+	text-decoration: none;
+	font-size: 21px;
+}
+.stablo ul {
+   list-style-image: url('bullet.png');
+}
+.fleft{
+	float: left;
+}
