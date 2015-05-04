@@ -3,83 +3,29 @@
 <head>
   <title>Gradsko Saobraćajno Preduzeće</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="site.css">
+  <link rel="stylesheet" type="text/css" href="Style\site.css">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <script src="Scripts/stablo.js"></script>
+  <script src="Scripts/forma.js"></script>
+  <script src="Scripts/site.js"></script>
 </head>
 
-<body class="background">
+<body class="background" onload="prikaziPartial('pocetna')">
 	<div class="site-part header">
-		<span><img src="Prevoz.gif" alt="Gradsko saobraćajno preduzeće" class="header-image"></span>
+		<span><img src="Content\Prevoz.gif" alt="Gradsko saobraćajno preduzeće" class="header-image"></span>
 		<span class="header-font-main">Trams</span>
 		<span class="header-font">Putujte brže</span>
 	</div>
 	<div class="site-part main-menu">
 		<ul>
-		  <li><a href="index.html">Naslovnica</a></li>
-		  <li><a href="redvoznje.html">Red Vožnje</a></li>
-		  <li><a href="onama.html">O nama</a></li>
-		  <li><a href="saznajvise.html">Saznaj više</a></li>
-		  <li><a href="kontakt.html">Kontakt</a></li>
+		  <li><a href="#" onclick="prikaziPartial('pocetna')">Naslovnica</a></li>
+		  <li><a href="#" onclick="prikaziPartial('redvoznje')">Red Vožnje</a></li>
+		  <li><a href="#" onclick="prikaziPartial('onama')">O nama</a></li>
+		  <li><a href="#" onclick="prikaziPartial('saznajvise')">Saznaj više</a></li>
+		  <li><a href="#" onclick="prikaziPartial('kontakt')">Kontakt</a></li>
 		</ul>
 	</div>
-		<div class="main-container">
-			<div class="no-decoration">
-			<ul>
-				<li> 
-					<div class="news-container">
-						<span class="news-image">
-							<img src="transport1.jpg" class="news-circle" alt="slika">
-						</span>
-						
-						<span  class="news-text">
-							29.03.2015<br />
-							Imenko Prezimenković<br />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-							<span class="more"><a href="">Opširnije...</a></span>													
-						</span>					
-					</div>
-				</li>
-				<li> 
-					<div class="news-container">
-						<span class="news-image">
-							<img src="transport2.jpg" class="news-circle" alt="slika">
-						</span>
-						<span  class="news-text">
-							29.03.2015<br />
-							Imenko Prezimenković<br />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-							<span class="more"><a href="">Opširnije...</a></span>													
-						</span>	
-					</div>
-				</li>
-				<li> 
-					<div class="news-container">
-						<span class="news-image">
-							<img src="transport3.jpg" class="news-circle" alt="slika">
-						</span>
-						<span  class="news-text">
-							29.03.2015<br />
-							Imenko Prezimenković<br />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-							<span class="more"><a href="">Opširnije...</a></span>													
-						</span>	
-					</div>
-				</li>
-				<li> 
-					<div class="news-container">
-						<span class="news-image">
-							<img src="transport4.jpg" class="news-circle" alt="slika">
-						</span>
-						<span  class="news-text">
-							29.03.2015<br />
-							Imenko Prezimenković<br />
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
-							<span class="more"><a href="">Opširnije...</a></span>													
-						</span>	
-					</div>
-				</li>				
-			</ul>
-		</div>
+	<div id="main-container" class="main-container">			
 	</div>
 </body>
 
