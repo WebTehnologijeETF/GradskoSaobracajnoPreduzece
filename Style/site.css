@@ -29,7 +29,7 @@
 }
 .main-menu{
 	margin-top: 40px;
-	height:480px;
+	height:600px;
 	width: 18%;
 	background:  black;
     -moz-opacity:0.4; /* Mozilla */
@@ -178,3 +178,21 @@
 .fleft{
 	float: left;
 }
+.reklama{
+	display: block;
+	width: 90%;
+	border: 1px solid black;
+	margin: 20px;
+}
+.reklamaSlika{
+	width: 30%;	
+	border: 1px solid black;
+	margin: 5px;
+}
+.reklamaOpis{
+	width: 30%;	
+	border: 1px solid black;
+	margin: 5px;
+}
+
+
