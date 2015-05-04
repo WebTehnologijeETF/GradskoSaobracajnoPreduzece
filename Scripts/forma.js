@@ -44,3 +44,32 @@ function ValidirajText(){
 		document.getElementById("invalidText").style.display = "inline";
 	}
 }
+
+function validirajMjestoBroj(){
+	var httpReq = new XMLHttpRequest();
+	var mjesto =  document.getElementById('mjesto').value;
+    var postanskiBroj =  document.getElementById('postanskiBroj').value;
+
+    if(!mjesto){
+    	return;
+    }
+    if(!postanskiBroj){
+    	return;
+    }
+
+	httpReq.onreadystatechange = function() {
+		var jsonParse=JSON.parse(httpReq.responseText);
+		if (httpReq.readyState == 4 && httpReq.status == 200) {
+			if (jsonParse.hasOwnProperty("greska")) {
+				document.getElementById("validityText").innerHTML = jsonParse["greska"];
+			}
+			else{
+				document.getElementById("validityText").innerHTML = jsonParse["ok"];
+				document.getElementById("validMjestoBroj").style.display = "inline";
+				document.getElementById("invalidMjestoBroj").style.display = "none";
+			}
+		}
+	}
+	httpReq.open("GET", "http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto="+mjesto+"&postanskiBroj="+postanskiBroj, true);
+	httpReq.send();	
+}

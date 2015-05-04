@@ -1,6 +1,5 @@
       <form id="Contact"class="contact">
 
-      <!--1. nije required ako uneses bilosta pokaze se zelena-->
       <p>Svrha kontaktiranja naseg preduzeca: <br />
         <input id="svrhaVal" list="svrha"><span id="validSvrha" class="display-inline"><img src="Content\valid.png" alt="validan unos"></span>
       <datalist id="svrha">        
@@ -33,12 +32,15 @@
        <p>Text:
        <span id="validText" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
        <span id="invalidText" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
-       <textarea id="textVal" rows="4" cols="50" class="contact-textearea" onchange="ValidirajText()" placeholder="Ovdje upišite text vaše poruke..." maxlength="100" required></textarea></p>
-       
-       <br /><br />
-       <!--disable dok forma nije valid-->
-       <button type="submit" class="contact-button" form="Contact" formmethod="post">Pošalji</button>
+       <textarea id="textVal" rows="4" cols="50" class="contact-textearea" onchange="ValidirajText()" placeholder="Ovdje upišite text vaše poruke..." maxlength="100" required></textarea>
 
-       <!--Uvijek enabled-->
+       Vase mjesto i postanski broj: <br /></p>
+       <input id="mjesto" type="text" placeholder="Mjesto" onchange="validirajMjestoBroj()"><input id="postanskiBroj" type="text" placeholder="postanski broj" onchange="validirajMjestoBroj()">
+       <span id="validMjestoBroj" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
+       <span id="invalidMjestoBroj" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
+       <span id="validityText"></span><br /><br />
+       
+       <button type="submit" class="contact-button" form="Contact" formmethod="post">Pošalji</button>
+       
        <button type="reset" class="contact-button" form="Contact">Obriši sve</button>
       </form>
