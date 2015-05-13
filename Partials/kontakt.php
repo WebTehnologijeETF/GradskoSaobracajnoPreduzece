@@ -24,7 +24,7 @@
 
        <!--Not Required---regex za samo slova razmak-->
        Vase ime i prezime:<br />
-       <input id="imeVal" type="text" onchange="ValidirajIme()" pattern="^[a-z ,.'-]+$" required>
+       <input id="imeVal" type="text" onchange="ValidirajIme()" pattern="^[a-zA-Z ,.'-]+$" required>
        <span id="validIme" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
        <span id="invalidIme" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
        
