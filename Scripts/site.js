@@ -11,6 +11,5 @@ function prikaziPartial(partialName) {
 	httpReq.send();
 }
 function prikaziVijest(filename){
-	prikaziPartial('novost');
-	Session("FileName") = filename;
+	prikaziPartial('novost');document.cookie="Filename="+filename;
 }

@@ -34,11 +34,11 @@
 							if($i<$duzinaFile-1){
 								print "<br />";
 							print "<span class='more'>";
-							print "<a href='#' onclick='prikaziVijest('";
+							print "<a href='#' onclick=\"prikaziVijest('";
 								$x = explode("/",$novost[$duzinaFile-1]);
 								$l = $x[count($x)-1];
-								print "'".trim($l)."'";
-								print ")'>Opširnije...</a></span>													
+								print trim($l);
+								print "')\">Opširnije...</a></span>													
 							</span>";
 							}
 											
