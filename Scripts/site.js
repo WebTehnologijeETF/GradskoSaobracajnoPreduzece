@@ -10,3 +10,7 @@ function prikaziPartial(partialName) {
 	httpReq.open("GET",parName,true);
 	httpReq.send();
 }
+function prikaziVijest(filename){
+	prikaziPartial('novost');
+	Session("FileName") = filename;
+}
