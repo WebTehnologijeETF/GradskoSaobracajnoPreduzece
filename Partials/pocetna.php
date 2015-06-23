@@ -1,51 +1,46 @@
 		<div class="no-decoration">
 			<ul>
-			<?php
-				session_start();
-				$novosti = array();
-				foreach(glob("../News/*.txt") as $fileName)
-				{
-					$nov = file($fileName);
-					array_push($nov, $fileName);
-					array_push($novosti, $nov);					
-				}
-				function sortingTime($a, $b)
-				{
-				    return strtotime($a[0])<strtotime($b[0]);
-				}
-				usort($novosti, "sortingTime");
-				foreach($novosti as $novost){
-					$duzinaFile=count($novost);
-					print 
+			 <?php
+		     $veza = new PDO("mysql:dbname=trams;host=localhost;charset=utf8", "dbihorac", "password1");
+		     $veza->exec("set names utf8");
+		    $rezultat = $veza->query("select id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, skraceno from vijest order by vrijeme desc");
+		    if (!$rezultat) {
+		         $greska = $veza->errorInfo();
+		          print "SQL greška: " . $greska[2];
+		          exit();
+		     }
+
+		    foreach ($rezultat as $vijest) {
+		    	print 
 					"<li>
 						<div class='news-container'>
 							<span class='news-image'>
-								<img src='".trim($novost[3])."' class='news-circle' alt='slika'>
+								<img src='".$vijest['slika']."' class='news-circle' alt='slika'>
 							</span>						
 							<span  class='news-text'>"
-							.trim($novost[0]).
-							"<h4>".ucfirst(strtolower(trim($novost[2])))."</h4>"
-							.$novost[1]."<br />";
-							$i=4;
-							while($i<$duzinaFile-1 && strcmp(trim($novost[$i]),'--') != 0){
-								print $novost[$i];
-								$i++;
-							}
-							if($i<$duzinaFile-1){
-								print "<br />";
+							.date("d.m.Y. (h:i)", $vijest['vrijeme2']).
+							"<h4>".ucfirst(strtolower(trim($vijest['naslov'])))."</h4>"
+							.$vijest['autor']."<br />";
+							print $vijest['skraceno'];
+							$comentarCount = $veza->query("select count(id) BrojKomentara from komentar where vijest=".$vijest["id"]);
+							print "<br />";
 							print "<span class='more'>";
-							print "<a href='#' onclick=\"prikaziVijest('";
-								$x = explode("/",$novost[$duzinaFile-1]);
-								$l = $x[count($x)-1];
-								print trim($l);
-								print "')\">Opširnije...</a></span>													
-							</span>";
+							print "<a href='#' onclick=\"prikaziKomentare('";
+							print trim($vijest['id']);	
+							foreach($comentarCount as $i){
+								print "')\">Komentari ".$i['BrojKomentara']."</a></br>";
 							}
+							if(strlen($vijest['tekst'])> 0){
+								print "<br />";																							
+								print "<a href='#' onclick=\"prikaziVijest('";								
+								print trim($vijest['id']);
+								print "')\">Opširnije...</a></span>";
+							}
+							
 											
-					print "</div></li>";	
-				}				
-
-			?>
+					print "</div></li>";
+		     }
+    		?>
 			
 			</ul>
 		</div>

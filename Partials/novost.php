@@ -1,34 +1,39 @@
 <div class="no-decoration">
 			<ul>
 			<?php
-				$novost = file("../News/".$_COOKIE["Filename"]);
-				$duzinaFile = count($novost);
-					print 
-					"<li>
-						<div class='news-container'>
-							<span class='news-image'>
-								<img src='".trim($novost[3])."' class='news-circle' alt='slika'>
-							</span>						
-							<span  class='news-text'>"
-							.trim($novost[0]).
-							"<h4>".ucfirst(strtolower(trim($novost[2])))."</h4>"
-							.$novost[1]."<br />";
-							print "<br /><br />";
-							$i=4;
-							while($i<$duzinaFile && strcmp(trim($novost[$i]),'--') != 0){
-								print $novost[$i];
-								$i++;
-							}
-							$i++;
-							print "<br /><br />";
-							while($i<$duzinaFile){								
-								print $novost[$i];
-								$i++;
-							}
-							
-											
-					print "</div></li>";
+					$veza = new PDO("mysql:dbname=trams;host=localhost;charset=utf8", "dbihorac", "password1");
+				    $veza->exec("set names utf8");
+				    $rezultat = $veza->query("select id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, skraceno from vijest where id=".$_COOKIE["IDvijesti"]." order by vrijeme desc");
+				    if (!$rezultat) {
+				         $greska = $veza->errorInfo();
+				          print "SQL greška: " . $greska[2];
+				          exit();
+				     }
+				     foreach ($rezultat as $vijest) {
+						print 
+						"<li>
+							<div class='news-container'>
+								<span class='news-image'>
+									<img src='".$vijest['slika']."' class='news-circle' alt='slika'>
+								</span>						
+								<span  class='news-text'>"
+								.date("d.m.Y. (h:i)", $vijest['vrijeme2']).
+								"<h4>".ucfirst(strtolower(trim($vijest['naslov'])))."</h4>"
+								.$vijest['autor']."<br />";
+								print "<br /><br />";
+								print $vijest['skraceno'];
+								print "<br /><br />";
+								print $vijest['tekst'];
+								print "<br /><br />";						
+						$comentarCount = $veza->query("select count(id) BrojKomentara from komentar where vijest=".$vijest["id"]);
+						foreach($comentarCount as $i){
+							print "<a href='#' onclick=\"prikaziPartial('komentari')\"> Komentari (".$i['BrojKomentara'].") </a>";	
+						}
+						print "<br /><br />";
 
+										
+						print "</div></li>";
+					}
 			?>
 			
 			</ul>

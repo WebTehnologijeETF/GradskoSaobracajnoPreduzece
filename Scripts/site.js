@@ -10,6 +10,12 @@ function prikaziPartial(partialName) {
 	httpReq.open("GET",parName,true);
 	httpReq.send();
 }
-function prikaziVijest(filename){
-	prikaziPartial('novost');document.cookie="Filename="+filename;
+function prikaziVijest(id){
+	document.cookie="IDvijesti="+id;
+	prikaziPartial('novost');
+}
+
+function prikaziKomentare(id){
+	document.cookie="IDvijesti="+id;
+	prikaziPartial('komentari');
 }
