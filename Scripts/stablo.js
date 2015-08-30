@@ -4,6 +4,25 @@ var tramvajArray = [ false, false, false, false, false, false, false];
 var AutobusskiLista;
 var busArray = [ false, false, false, false, false, false, false];
 
+var PrikaziSve;
+
+var zab;
+
+var res;
+
+
+function prikaziSveNovosti(){
+	if(PrikaziSve !== true){
+		document.getElementById("AllTimetable").style.display = "block";
+		document.getElementById("prikaziSakrij").InnerHtml = "Sakrij red voznje";
+		PrikaziSve = true;
+	}else{
+		document.getElementById("AllTimetable").style.display = "none";
+		document.getElementById("prikaziSakrij").InnerHtml = "Prikazi red voznje";
+		PrikaziSve = false;
+	}
+}
+
 function ShowTramvajskiList(){
 	if(tramvajskiLista !== true){
 		document.getElementById("tramvajskiList").style.display = "block";
@@ -40,5 +59,23 @@ function ShowBus(number){
 	}else{
 		el.style.display = "none";
 		busArray[number-1] = false;
+	}
+}
+function prikaziReset(){
+	if(zab !== true){
+		document.getElementById("zaboravljenPassword").style.display = "inline";
+		zab = true;
+	}else{
+		document.getElementById("zaboravljenPassword").style.display = "none";
+		zab = false;
+	}
+}
+function showResetPassword (){
+	if(res !== true){
+		document.getElementById("resetPass").style.display = "inline";
+		res = true;
+	}else{
+		document.getElementById("resetPass").style.display = "none";
+		res = false;
 	}
 }

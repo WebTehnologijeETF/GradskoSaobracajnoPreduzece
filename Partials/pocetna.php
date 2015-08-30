@@ -1,7 +1,7 @@
 		<div class="no-decoration">
 			<ul>
 			 <?php
-		     $veza = new PDO("mysql:dbname=trams;host=localhost;charset=utf8", "dbihorac", "password1");
+		     $veza = new PDO("mysql:dbname=wt8;host=localhost;charset=utf8", "dbihorac", "password1");
 		     $veza->exec("set names utf8");
 		    $rezultat = $veza->query("select id, naslov, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme2, autor, slika, skraceno from vijest order by vrijeme desc");
 		    if (!$rezultat) {
@@ -22,7 +22,7 @@
 							"<h4>".ucfirst(strtolower(trim($vijest['naslov'])))."</h4>"
 							.$vijest['autor']."<br />";
 							print $vijest['skraceno'];
-							$comentarCount = $veza->query("select count(id) BrojKomentara from komentar where vijest=".$vijest["id"]);
+							$comentarCount = $veza->query("select count(*) BrojKomentara from komentar where vijest=".$vijest["id"]);
 							print "<br />";
 							print "<span class='more'>";
 							print "<a href='#' onclick=\"prikaziKomentare('";

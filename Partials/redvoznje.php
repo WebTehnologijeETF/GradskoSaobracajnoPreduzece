@@ -1,7 +1,8 @@
-  <div class="partners">
-    <h3><a href="#" onclick="ShowTramvajskiList()">+Tramvajski saobraćaj:</a></h3>
+  <p>Na ovoj stranici mozete vidjeti raspored voznje <br/><span id="prikaziSakrij" class="partners"><a href="#" onclick="prikaziSveNovosti()"><strong>+ Prikazi red voznje</strong></a></span></p>
+  <div id="AllTimetable"class="partners display-none">
+    <h3><a href="#" onclick="ShowTramvajskiList()">&nbsp;&nbsp;&nbsp;+Tramvajski saobraćaj:</a></h3>
     <div class="display-none" id="tramvajskiList">
-      <a href="#" onclick="ShowTram('1')">+ Ponedjeljak </a><br />
+      <a href="#" onclick="ShowTram('1')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ponedjeljak </a><br />
       <div class="display-none" id="tram1">
       <table id="tamvajski1" class="time-table">
        <tr>
@@ -92,7 +93,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowTram('2')">+ Utorak </a><br />
+      <a href="#" onclick="ShowTram('2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Utorak </a><br />
       <div id="tram2" class="display-none">
         <table id="tamvajski2" class="time-table">
        <tr>
@@ -183,7 +184,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowTram('3')">+ Srijeda</a> <br />
+      <a href="#" onclick="ShowTram('3')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Srijeda</a> <br />
       <div class="display-none" id="tram3">
         <table id="tamvajski3" class="time-table">
        <tr>
@@ -274,7 +275,7 @@
         </tr>
      </table>
       </div>
-       <a href="#" onclick="ShowTram('4')">+ Cetvrtak</a> <br />
+       <a href="#" onclick="ShowTram('4')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cetvrtak</a> <br />
       <div class="display-none" id="tram4">
         <table id="tamvajski4" class="time-table">
        <tr>
@@ -365,7 +366,7 @@
         </tr>
      </table>
       </div>
-       <a href="#" onclick="ShowTram('5')">+ Petak</a><br />
+       <a href="#" onclick="ShowTram('5')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Petak</a><br />
       <div class="display-none" id="tram5">
        <table id="tamvajski5" class="time-table">
        <tr>
@@ -456,7 +457,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowTram('6')">+ Subota</a> <br />
+      <a href="#" onclick="ShowTram('6')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Subota</a> <br />
       <div class="display-none" id="tram6">
         <table id="tamvajski6" class="time-table">
        <tr>
@@ -547,7 +548,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowTram('7')">+ Nedjelja </a><br />
+      <a href="#" onclick="ShowTram('7')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Nedjelja </a><br />
       <div class="display-none" id="tram7">
         <table id="tamvajski7" class="time-table">
        <tr>
@@ -641,9 +642,9 @@
 
     </div>
     
-    <h3><a href="#" onclick="ShowAutobusskiList()">+Autobuski saobraćaj:</a></h3>
+    <h3><a href="#" onclick="ShowAutobusskiList()">&nbsp;&nbsp;&nbsp;+Autobuski saobraćaj:</a></h3>
     <div class="display-none" id="AutobusskiList">
-      <a href="#" onclick="ShowBus('1')">+ Ponedjeljak </a><br />
+      <a href="#" onclick="ShowBus('1')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ponedjeljak </a><br />
       <div class="display-none" id="bus1">
       <table id="tamvajski1" class="time-table">
        <tr>
@@ -734,7 +735,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowBus('2')">+ Utorak </a><br />
+      <a href="#" onclick="ShowBus('2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Utorak </a><br />
       <div id="bus2" class="display-none">
         <table id="tamvajski2" class="time-table">
        <tr>
@@ -825,7 +826,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowBus('3')">+ Utorak </a><br />
+      <a href="#" onclick="ShowBus('3')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Srijeda </a><br />
       <div class="display-none" id="bus3">
         <table id="tamvajski3" class="time-table">
        <tr>
@@ -916,7 +917,7 @@
         </tr>
      </table>
       </div>
-       <a href="#" onclick="ShowBus('4')">+ Utorak </a><br />
+       <a href="#" onclick="ShowBus('4')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Cetvrtak </a><br />
       <div class="display-none" id="bus4">
         <table id="tamvajski4" class="time-table">
        <tr>
@@ -1007,7 +1008,7 @@
         </tr>
      </table>
       </div>
-       <a href="#" onclick="ShowBus('5')">+ Utorak </a><br />
+       <a href="#" onclick="ShowBus('5')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Petak </a><br />
       <div class="display-none" id="bus5">
        <table id="tamvajski5" class="time-table">
        <tr>
@@ -1098,7 +1099,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowBus('6')">+ Utorak </a><br />
+      <a href="#" onclick="ShowBus('6')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Subota </a><br />
       <div class="display-none" id="bus6">
         <table id="tamvajski6" class="time-table">
        <tr>
@@ -1189,7 +1190,7 @@
         </tr>
      </table>
       </div>
-      <a href="#" onclick="ShowBus('7')">+ Utorak </a><br />
+      <a href="#" onclick="ShowBus('7')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Nedjelja </a><br />
       <div class="display-none" id="bus7">
         <table id="tamvajski7" class="time-table">
        <tr>

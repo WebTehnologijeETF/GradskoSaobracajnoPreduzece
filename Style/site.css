@@ -1,3 +1,7 @@
+.site-part p{
+	color: #4899B7;
+	font-size: 20px;
+}
 .background{
 	background-image: url("../Content/grey.png");
     background-repeat: repeat;
@@ -193,6 +197,9 @@
 	width: 30%;	
 	border: 1px solid black;
 	margin: 5px;
+}
+.float-right{
+	float:right;
 }
 
 

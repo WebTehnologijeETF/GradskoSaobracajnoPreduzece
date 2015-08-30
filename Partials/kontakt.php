@@ -1,7 +1,7 @@
       <form id="Contact"class="contact">
 
       <p>Svrha kontaktiranja naseg preduzeca: <br />
-        <input id="svrhaVal" list="svrha"><span id="validSvrha" class="display-inline"><img src="Content\valid.png" alt="validan unos"></span>
+        <input id="SvrhaVal" list="svrha" onchange="ValidirajPolje('Svrha')"><span id="validSvrha" class="display-none"><img src="Content\valid.png" alt="validan unos"></span>
       <datalist id="svrha">        
         <option value="Primjedba">
         <option value="Zalba">
@@ -12,32 +12,41 @@
 
       <!--Required---regex za email-->
        Vas email: <br />      
-       <input id="emailVal" type="text" onchange="ValidirajEmail()" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-       <span id="validEmail" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
-       <span id="invalidEmail" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
+       <input id="EmailVal" type="text" onchange="ValidirajPolje('Email', true, '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'); ValidirajPolje('PotvrdiEmail', false, false, 'Email')"></input>
+       <span id="validEmail" class="display-none"><img src="Content\valid.png" alt="validan unos"></span>
+       <span id="invalidEmail" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"></span>
+       <span id="requiredEmail" class="display-inline">Email je obavezan</span>
+       <span id="patternEmail" class="display-none">Email nema odgovarajuci format</span>
+       <br />
 
        <!--Required---regex za email-->
        Potvrdite vas email: <br />      
-       <input id="potvrdiEmailVal" type="text" onchange="PotvrdiEmail()" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-       <span id="validPotvrdiEmail" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
-       <span id="invalidPotvrdiEmail" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
+       <input id="PotvrdiEmailVal" type="text" onchange="ValidirajPolje('PotvrdiEmail', true, '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$', 'Email')"></input>
+       <span id="validPotvrdiEmail" class="display-none"><img src="Content\valid.png" alt="validan unos"></span>
+       <span id="invalidPotvrdiEmail" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"></span>
+       <span id="requiredPotvrdiEmail" class="display-inline">Email je obavezan</span>
+       <span id="patternPotvrdiEmail" class="display-none">Email nema odgovarajuci format</span>
+       <span id="crossPotvrdiEmail" class="display-none">Unosi su razliciti</span>
+       <br />
 
-       <!--Not Required---regex za samo slova razmak-->
        Vase ime i prezime:<br />
-       <input id="imeVal" type="text" onchange="ValidirajIme()" pattern="^[a-zA-Z ,.'-]+$" required>
-       <span id="validIme" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
-       <span id="invalidIme" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
+       <input id="ImeVal" type="text" onchange="ValidirajPolje('Ime', true, '^[a-zA-Z ,.-]+$')"></input>
+       <span id="validIme" class="display-none"><img src="Content\valid.png" alt="validan unos"></span>
+       <span id="invalidIme" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"></span>
+       <span id="requiredIme" class="display-inline">Vase ime je obavezno</span>
+       <span id="patternIme" class="display-none">Vas unos nema validnu vrijednost</span>
+       <br />
        
-       <!--Required-->
+       
        <p>Text:
-       <span id="validText" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
-       <span id="invalidText" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
-       <textarea id="textVal" rows="4" cols="50" class="contact-textearea" onchange="ValidirajText()" placeholder="Ovdje upišite text vaše poruke..." maxlength="100" required></textarea>
+       <span id="validText" class="display-none"><img src="Content\valid.png" alt="validan unos"></input><br /></span>
+       <span id="invalidText" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos">Text poruke je obavezan<br /></span>
+       <textarea id="TextVal" rows="4" cols="50" class="contact-textearea" onchange="ValidirajPolje('Text',true)" placeholder="Ovdje upišite text vaše poruke..." maxlength="100" ></textarea>
 
        Vase mjesto i postanski broj: <br /></p>
-       <input id="mjesto" type="text" placeholder="Mjesto" onchange="validirajMjestoBroj()"><input id="postanskiBroj" type="text" placeholder="postanski broj" onchange="validirajMjestoBroj()">
+       <input id="mjesto" type="text" placeholder="Mjesto" onchange="validirajMjestoBroj()"><input id="postanskiBroj" type="text" placeholder="postanski broj" onchange="validirajMjestoBroj()"></input>
        <span id="validMjestoBroj" class="display-none"><img src="Content\valid.png" alt="validan unos"><br /></span>
-       <span id="invalidMjestoBroj" class="display-inline"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
+       <span id="invalidMjestoBroj" class="display-none"><img src="Content\novalid.png" alt="nije validan unos"><br /></span>
        <span id="validityText"></span><br /><br />
        
        <button type="submit" class="contact-button" form="Contact" formmethod="post">Pošalji</button>

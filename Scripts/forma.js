@@ -1,48 +1,53 @@
- function ValidirajEmail(){
-	var valid = document.getElementById("emailVal").validity.valid;
-	if(valid){
-		document.getElementById("validEmail").style.display = "inline";
-		document.getElementById("invalidEmail").style.display = "none";
-		PotvrdiEmail();
+
+ //svrha samo valid
+ //email required regex
+ //ime required regex
+ //text samo required
+ //potvrdi email 
+
+function ValidirajPolje(name, required, regex, crossValidateWith){	
+	var reg = new RegExp(regex);
+ 	var value = document.getElementById(name+"Val").value;
+ 	var requiredValid = !required ? true : value != "" && value.valueOf() != undefined;
+ 	var patternValid = !regex ? true : value == "" || value.valueOf() == undefined || reg.test(value);
+ 	var crossValid = !crossValidateWith ? true : isMatch(value, document.getElementById(crossValidateWith+"Val").value);
+ 	if(requiredValid && (value == "" || value.valueOf() == undefined)){
+ 		if(document.getElementById("valid"+name)) document.getElementById("valid"+name).style.display = "none";
+		if(document.getElementById("invalid"+name)) document.getElementById("invalid"+name).style.display = "none";
+		if(document.getElementById("required"+name)) document.getElementById("required"+name).style.display = "none";
+		if(document.getElementById("pattern"+name)) document.getElementById("pattern"+name).style.display = "none";
+		if(document.getElementById("cross"+name)) document.getElementById("cross"+name).style.display = "none";
+ 	}
+	else if(requiredValid && patternValid && crossValid){
+		if(document.getElementById("valid"+name)) document.getElementById("valid"+name).style.display = "inline";
+		if(document.getElementById("invalid"+name)) document.getElementById("invalid"+name).style.display = "none";
+		if(document.getElementById("required"+name)) document.getElementById("required"+name).style.display = "none";
+		if(document.getElementById("pattern"+name)) document.getElementById("pattern"+name).style.display = "none";
+		if(document.getElementById("cross"+name)) document.getElementById("cross"+name).style.display = "none";
 	}else{
-		document.getElementById("validEmail").style.display = "none";
-		document.getElementById("invalidEmail").style.display = "inline";
-		PotvrdiEmail();
+		if(document.getElementById("valid"+name)) document.getElementById("valid"+name).style.display = "none";
+		if(document.getElementById("invalid"+name)) document.getElementById("invalid"+name).style.display = "inline";
+		if(!requiredValid){
+			if(document.getElementById("pattern"+name)) document.getElementById("pattern"+name).style.display = "none";
+			if(document.getElementById("required"+name)) document.getElementById("required"+name).style.display = "inline";
+			if(document.getElementById("cross"+name)) document.getElementById("cross"+name).style.display = "none";
+
+		}
+		if(!patternValid){
+			if(document.getElementById("pattern"+name)) document.getElementById("pattern"+name).style.display = "inline";
+			if(document.getElementById("required"+name)) document.getElementById("required"+name).style.display = "none";
+			if(document.getElementById("cross"+name)) document.getElementById("cross"+name).style.display = "none";
+		}
+		if(!crossValid){
+			if(document.getElementById("pattern"+name)) document.getElementById("pattern"+name).style.display = "none";
+			if(document.getElementById("required"+name)) document.getElementById("required"+name).style.display = "none";
+			if(document.getElementById("cross"+name)) document.getElementById("cross"+name).style.display = "inline";
+		}
 	}
 }
-function ValidirajIme(){
-	var valid = document.getElementById("imeVal").validity.valid;
-	if(valid){
-		document.getElementById("validIme").style.display = "inline";
-		document.getElementById("invalidIme").style.display = "none";
-	}else{
-		document.getElementById("validIme").style.display = "none";
-		document.getElementById("invalidIme").style.display = "inline";
-	}
-}
-function PotvrdiEmail(){
-	var value = document.getElementById("emailVal").value;
-	var valuePotvrdi = document.getElementById("potvrdiEmailVal").value;
-	var valid = document.getElementById("potvrdiEmailVal").validity.valid;
-	if(valid && value === valuePotvrdi){
-		document.getElementById("validPotvrdiEmail").style.display = "inline";
-		document.getElementById("invalidPotvrdiEmail").style.display = "none";	
-		document.getElementById("potvrdiEmailVal").validity.valid = true;
-	}else{
-		document.getElementById("validPotvrdiEmail").style.display = "none";
-		document.getElementById("invalidPotvrdiEmail").style.display = "inline";
-		document.getElementById("potvrdiEmailVal").validity.valid = false;
-	}
-}
-function ValidirajText(){
-	var valid = document.getElementById("textVal").validity.valid;
-	if(valid){
-		document.getElementById("validText").style.display = "inline";
-		document.getElementById("invalidText").style.display = "none";		
-	}else{
-		document.getElementById("validText").style.display = "none";
-		document.getElementById("invalidText").style.display = "inline";
-	}
+function isMatch(string1, string2){
+	if(!string1 || !string2) return true;
+	return string1 === string2;
 }
 
 function validirajMjestoBroj(){
